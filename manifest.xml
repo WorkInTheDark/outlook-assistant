@@ -10,8 +10,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="RA Reply"/>
   <Description DefaultValue="Drafts replies to student research inquiries from your playbook."/>
-  <IconUrl DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-128.png"/>
+  <IconUrl DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-128.png"/>
   <SupportUrl DefaultValue="https://www.bingshengyao.com/"/>
   <AppDomains>
     <AppDomain>https://www.bingshengyao.com</AppDomain>
@@ -27,7 +27,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/taskpane.html"/>
+        <SourceLocation DefaultValue="https://www.bingshengyao.com/outlook-assistant/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -131,20 +131,20 @@
 
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon.16" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-16.png"/>
-          <bt:Image id="Icon.25" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-25.png"/>
-          <bt:Image id="Icon.32" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-32.png"/>
-          <bt:Image id="Icon.48" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-48.png"/>
-          <bt:Image id="Icon.50" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-50.png"/>
-          <bt:Image id="Icon.64" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-64.png"/>
-          <bt:Image id="Icon.75" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-75.png"/>
-          <bt:Image id="Icon.80" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-80.png"/>
-          <bt:Image id="Icon.96" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-96.png"/>
-          <bt:Image id="Icon.144" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/assets/icon-144.png"/>
+          <bt:Image id="Icon.16" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-16.png"/>
+          <bt:Image id="Icon.25" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-25.png"/>
+          <bt:Image id="Icon.32" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-32.png"/>
+          <bt:Image id="Icon.48" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-48.png"/>
+          <bt:Image id="Icon.50" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-50.png"/>
+          <bt:Image id="Icon.64" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-64.png"/>
+          <bt:Image id="Icon.75" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-75.png"/>
+          <bt:Image id="Icon.80" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-80.png"/>
+          <bt:Image id="Icon.96" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-96.png"/>
+          <bt:Image id="Icon.144" DefaultValue="https://www.bingshengyao.com/outlook-assistant/assets/icon-144.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="Taskpane.Url" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/taskpane.html"/>
-          <bt:Url id="Commands.Url" DefaultValue="https://www.bingshengyao.com/ra-reply-assistant/commands.html"/>
+          <bt:Url id="Taskpane.Url" DefaultValue="https://www.bingshengyao.com/outlook-assistant/taskpane.html"/>
+          <bt:Url id="Commands.Url" DefaultValue="https://www.bingshengyao.com/outlook-assistant/commands.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="Group.Label" DefaultValue="RA Reply"/>
