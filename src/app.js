@@ -30,16 +30,29 @@ let abort = null;
 let cancelledByUser = false;
 let runId = 0;
 
-init().catch((e) => showError(`Couldn't start: ${e.message}`));
+init().catch((e) => {
+  const el = $('fatal');
+  el.textContent = `RA Reply couldn't start while ${window.raReplyStage || 'loading'}: ${e.message}`;
+  el.hidden = false;
+});
+
+// The watchdog in taskpane.html reports the last stage if startup stalls.
+function stage(name) {
+  window.raReplyStage = name;
+}
 
 async function init() {
+  stage('waiting for Outlook');
   host = await createHost();
+  stage('reading settings');
   settings = host.loadSettings();
+  stage('setting up the panel');
   refreshPlaybook();
   bindEvents();
   if (host.samples) setupDevBar();
   if (host.isMobile) document.body.classList.add('mobile');
   host.onItemChanged(() => loadItem());
+  window.raReplyStarted = true;
   if (!settings.apiKey || !settings.playbook) showSettings(true);
   else await loadItem();
 }

@@ -7,8 +7,8 @@ The agent sees only the email you have open. It never sends anything itself.
 ## Install (once)
 
 1. In a browser, sign in to Outlook on the web and go to <https://aka.ms/olksideload>.
-2. Choose **My add-ins** → **Custom Addins** → **Add a custom add-in** → **Add from URL…**
-3. Paste `https://www.bingshengyao.com/outlook-assistant/manifest.xml` and confirm.
+2. Choose **My add-ins** → **Custom Addins** → **Add a custom add-in**.
+3. Choose **Add from URL…** and paste `https://www.bingshengyao.com/outlook-assistant/manifest.xml`, or, if your organization only offers **Add from File…**, pick `manifest.xml` from this repo. Either way the add-in loads from the website.
 
 The add-in is now in your mailbox, so it shows up in Outlook for Mac and Outlook for iOS too (it can take a few minutes to appear).
 

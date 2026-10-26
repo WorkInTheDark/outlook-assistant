@@ -6,6 +6,33 @@
     <title>RA Reply</title>
     <link rel="stylesheet" href="taskpane.css" />
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script>
+      // If the panel's code fails or never starts, say why instead of showing "Loading…" forever.
+      (function () {
+        function report(msg) {
+          if (window.raReplyStarted) return;
+          var el = document.getElementById('fatal');
+          if (!el) return document.addEventListener('DOMContentLoaded', function () { report(msg); });
+          el.textContent = msg;
+          el.hidden = false;
+        }
+        window.addEventListener('error', function (e) {
+          report('RA Reply hit an error while starting: ' + e.message + (e.filename ? ' (' + e.filename.split('/').pop() + ':' + e.lineno + ')' : ''));
+        });
+        window.addEventListener('unhandledrejection', function (e) {
+          report('RA Reply hit an error while starting: ' + ((e.reason && e.reason.message) || e.reason));
+        });
+        setTimeout(function () {
+          var d = window.Office && Office.context && Office.context.diagnostics;
+          report(
+            'RA Reply didn’t finish starting' +
+              (window.raReplyStage ? ' (stuck while ' + window.raReplyStage + ').' : ': its code didn’t load.') +
+              ' Office.js: ' + (window.Office ? 'loaded' : 'missing') +
+              (d ? '; Outlook ' + d.platform + ' ' + d.version : '') + '.'
+          );
+        }, 10000);
+      })();
+    </script>
     <script type="module" src="src/app.js"></script>
   </head>
   <body>
@@ -27,6 +54,8 @@
     </header>
 
     <main>
+      <div id="fatal" class="error" role="alert" hidden></div>
+
       <section id="mainView" hidden>
         <button id="draftBtn" class="btn primary block">Draft reply</button>
 

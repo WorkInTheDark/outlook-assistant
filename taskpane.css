@@ -231,6 +231,11 @@ input:focus {
   color: var(--error-fg);
 }
 
+#fatal {
+  margin-bottom: 12px;
+  word-break: break-word;
+}
+
 .warning {
   background: var(--warn-bg);
   color: var(--warn-fg);
