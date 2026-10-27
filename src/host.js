@@ -65,13 +65,14 @@ function officeHost() {
       );
     },
 
+    // Roaming settings live on Office.context, not on the mailbox.
     loadSettings() {
-      const rs = mailbox.roamingSettings;
+      const rs = Office.context.roamingSettings;
       return Object.fromEntries(SETTING_KEYS.map((k) => [k, rs.get(k) || '']));
     },
 
     async saveSettings(values) {
-      const rs = mailbox.roamingSettings;
+      const rs = Office.context.roamingSettings;
       for (const k of SETTING_KEYS) rs.set(k, values[k] || '');
       await promisify((cb) => rs.saveAsync(cb));
     },
